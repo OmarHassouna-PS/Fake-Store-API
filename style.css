@@ -1,0 +1,240 @@
+/* start general */
+
+:root {
+    --main-color:  #25aae1;
+    --second-color: #ef5396;
+    --border-color: #ef5396;
+    --white-color: #fff;
+}
+
+* {
+    margin: 0;
+	padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    overflow-x: hidden;
+    background-color: var(--white-color)
+}
+
+.general-font {
+    color: var(--white-color);
+    font-size: 1.3rem;
+    line-height: 1.5;
+    word-spacing: 0.1rem;
+}
+
+.Hero-section > div {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+}
+
+.text-main-color {
+    color: #1b88b7;
+}
+
+.text-second-color {
+    color: var(--second-color);
+}
+
+/* end general */
+
+/* ************************** */
+
+/* start nav */
+
+.logo {
+    width: 80px;
+    height: auto;
+}
+
+.navbar-nav .nav-link {
+    color: var(--white-color);
+    box-shadow: 0px 0px 5px var(--border-color);
+    border-radius: 10px;
+    background-color: var(--main-color);
+}
+
+.navbar-nav .nav-link:focus, 
+.navbar-nav .nav-link:hover {
+    box-shadow: 0px 0px 30px var(--border-color);
+    transition: color .30s ease-in-out,background-color .30s ease-in-out,border-color .30s ease-in-out,box-shadow .30s ease-in-out;
+} 
+
+.navbar-nav .nav-link.active {
+    color: var(--second-color);
+}
+
+.navbar {
+    background-color: #ddd;
+}
+
+/* end nav */
+
+/* ************************** */
+
+/* start hero-section */
+
+.Hero-section, .register-section {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(images/10.jpg);
+    min-height: calc(100vh - 90px);
+}
+
+.information-section {
+    background-color: #ddd;
+}
+
+.Hero-text-section {
+    color: var(--main-color);
+    /* backdrop-filter: blur(5px); */
+    border-radius: 10px;
+}
+
+.Hero-section > div {
+    min-height: calc(100vh - 55px);
+}
+
+/* end hero-section */
+
+/* start information-section */
+
+.information-section {
+    min-height: calc(100vh - 55px);
+}
+
+.table, .table th, .table td  {
+    border: 1px solid;
+    color: var(--main-color);
+}
+
+/* end information-section */
+
+/* ************************** */
+
+/* start Line and bottom Contact section */
+
+.logo {
+    width: 60px;
+}
+
+.line {
+    height: 7px;
+    width: 60px;
+    background: var(--second-color);
+    border-radius: 5px;
+    opacity: 1.0;
+}
+
+.line-full, hr {
+    border-top: 3px solid var(--second-color);
+    margin: 0;
+}
+
+.btn {
+    color:var(--main-color);
+}
+
+.Hero-button {
+    background-color: var(--main-color);
+    width: 8rem;
+    height: 3rem;
+    color: var(--second-color);
+    
+}
+
+.Hero-button:hover {
+    background-color: var(--second-color);
+    transition: color .30s ease-in-out,background-color .30s ease-in-out,box-shadow .30s ease-in-out;
+}
+
+.btn-outline-danger {
+    --bs-btn-hover-color: var(--main-color);
+    --bs-btn-hover-bg: var(--second-color);
+    --bs-btn-hover-border-color: var(--second-color);
+    border-color: var(--second-color);
+    --bs-btn-active-bg: var(--border-color);
+    --bs-btn-active-border-color: var(--border-color);
+}
+
+/* End Line and bottom Contact section */
+
+/* ************************** */
+
+/* Start Card */
+
+.card {
+    box-shadow: 0px 0px 10px var(--border-color);
+    margin-top: 50px;
+    background-color: #0005;
+}
+
+.card-font {
+    color: #fff;
+    font-size: 20px;
+    padding: 0px 10px;
+    overflow-x: hidden;
+}
+
+.card-img {
+    border-radius: 10px;
+    border: 2px solid rgb(232, 232, 232);
+}
+
+.body-card {
+    width: 75%;
+}
+
+/* End Card students */
+
+/* Start Products */ 
+
+.container-product {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(250px, 1fr));
+    justify-items: center;
+    align-items: center;
+}
+
+.product {
+    height: 700px;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    justify-content: space-between;
+}
+
+/* End products */
+
+@media (max-width: 767px) {
+    .navbar-nav li{
+        margin-top: 8px;
+        margin-bottom: 4px;
+        text-align: center;
+    }
+
+    .logo {
+        display: none;
+    }
+}
+
+@media (max-width: 1200px) {
+    .navbar-nav li{
+       font-size: 10px;
+       font-weight: 900;
+    }
+}
+
+@media (max-width: 400px) {
+    .product {
+        width: 200px;
+        height: 500px;
+    }
+}
