@@ -13,12 +13,12 @@ arrayProducts = [];
 function render() {
 
     let addProduct = document.getElementById("addProduct");
-    
+    arrayProducts.pop();
     arrayProducts.forEach( (Product) => {
 
         // Create div card
         let divParent = document.createElement('div');
-        divParent.className = "product card ms-4 mb-4 form-font";
+        divParent.className = "product card ms-4 mb-4";
 
         let attr = document.createAttribute("data-aos");
         attr.value = "flip-left";
@@ -39,7 +39,7 @@ function render() {
 
         // Create and add information student in divInfo
         let divInfo = document.createElement('div');
-        divInfo.className = "card-font";
+        divInfo.className = "font-card";
         
         let prgName = document.createElement('p');
         let prgGender = document.createElement('p');
