@@ -41,19 +41,19 @@ function render() {
         let divInfo = document.createElement('div');
         divInfo.className = "font-card";
         
-        let prgName = document.createElement('p');
-        let prgGender = document.createElement('p');
+        let prgTitle = document.createElement('p');
+        let prgPrice = document.createElement('p');
         let prgPhone = document.createElement('p');
-        let prgMajor = document.createElement('p');
+        let prgDescription = document.createElement('p');
 
-        prgName.textContent = Product.title;
-        prgGender.textContent = Product.price;
+        prgTitle.textContent = Product.title;
+        prgPrice.textContent = Product.price  + " $";
         prgPhone.textContent = Product.description;
 
-        divInfo.appendChild(prgName);
-        divInfo.appendChild(prgGender);
+        divInfo.appendChild(prgTitle);
+        divInfo.appendChild(prgPrice);
         divInfo.appendChild(prgPhone);
-        divInfo.appendChild(prgMajor);
+        divInfo.appendChild(prgDescription);
 
         let button = document.createElement('button');
         button.className = "Hero-button btn mt-3";
